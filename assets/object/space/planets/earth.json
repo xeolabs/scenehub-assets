@@ -1,0 +1,111 @@
+{
+    "id": "ground",
+    "rotate": {
+        "y": 1,
+        "angle": 0
+    },
+    "appearance": {
+        "material": {
+            "specular": 0.5,
+            "shine": 100,
+            "emit": 0,
+            "alpha": 1,
+            "baseColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+            },
+            "specularColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+            }
+        },
+        "texture": {
+            "coreId": "earth-ground-texture",
+            "layers": [
+                {
+                    "src": "earth/Earth-Color4096.jpg",
+                    "applyTo": "baseColor",
+                    "blendMode": "multiply",
+                    "flipY": false
+                },
+                {
+                    "src": "earth/earth_specular_2048.jpg",
+                    "applyTo": "specular",
+                    "blendMode": "multiply",
+                    "flipY": false
+                },
+                {
+                    "src": "earth/earth-lights.gif",
+                    "applyTo": "emit",
+                    "blendMode": "add",
+                    "flipY": false
+                },
+                {
+                    "src": "earth/earth-normal_map.jpg",
+                    "applyTo": "normals",
+                    "blendMode": "multiply",
+                    "flipY": false
+                }
+            ]
+        }
+    },
+    "geometry": {
+        "source": {
+            "type": "sphere"
+        }
+    },
+    "objects": [
+        {
+            "id": "clouds",
+            "scale": {
+                "x": 1.02,
+                "y": 1.02,
+                "z": 1.02
+            },
+            "rotate": {
+                "y": 1,
+                "angle": 0
+            },
+            "flags": {
+                "transparent": true,
+                "specular": true,
+                "blendFunc": {
+                    "sfactor": "srcAlpha",
+                    "dfactor": "one"
+                },
+                "backfaces": false
+            },
+            "appearance": {
+                "material": {
+                    "specular": 0,
+                    "shine": 1.0E-4,
+                    "emit": 0,
+                    "alpha": 1,
+                    "baseColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
+                    }
+                },
+                "texture": {
+                    "coreId": "earth-clouds-texture",
+                    "layers": [
+                        {
+                            "src": "earth/clouds.jpg",
+                            "applyTo": "alpha",
+                            "blendMode": "multiply",
+                            "flipY": false
+                        }
+                    ]
+                }
+            },
+            "geometry": {
+                "source": {
+                    "type": "sphere"
+                }
+            }
+        }
+    ]
+}

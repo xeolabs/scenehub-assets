@@ -1,0 +1,15 @@
+{
+    "material":{
+        "baseColor":{
+            "r":1, "g":1, "b":1, "a":1
+        }
+    },
+    "texture":{
+        "layers":[
+            {
+                "src":"superman.jpg",
+                "blendMode":"multiply"
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "material":{
+        "baseColor":{
+            "r":1, "g":1, "b":1
+        },
+        "emit":0.0
+    },
+    "texture":{
+        "layers":[
+            {
+                "src":"clouds-box.jpg",
+                "blendMode":"multiply"
+            }
+        ]
+    }
+}
